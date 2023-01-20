@@ -1,0 +1,260 @@
+METODOS DE SRING;
+No Booleanas;
+
+concat() --> añade otra cadena;
+cadena1.concat("cadena2");
+
+indexOf() --> la posicion donde comienza la cadena;
+cadena1.indexOf(cadena2);
+
+lastIndexOf() --> identico pero posicion de atras hacia adelante;
+
+padStart() --> rellena la cadena desde el inicio;
+cadena1.padStart(cantCaracteres, Relleno);
+
+padEnd() --> igual;
+
+repeat() --> repite la cant de veces que quieras la cadena;
+cadena1.repeat(cantRep);
+;
+split() --> Divide la cadena como le pidamos;
+cadena.split("donde dividir"); devuelve un Array;
+
+substring() --> crea un array a partir de x posicion;
+cadena.substring(desde,hasta-no se incluye.);
+
+toLowerCase() --> convierte a minuscula;
+cadena.toLowerCase();
+
+toUpperCase() --> igual;
+
+toString() --> convierte a String;
+cadena.toString();
+
+trim() --> elimina los espacios en blanco
+trimStart();
+trimEnd();
+
+
+Booleanas;
+
+startsWith() --> booleano para verificar;
+caena1.startsWith("cadena2");
+ en caso de que empiece con esa cadena devuelve true-false;
+
+endsWith() --> igual;
+
+includes() --> si encuentra la cadena en cualquier parte devuelve true;
+cadena1.includes(cadena2);
+
+
+METODOS DE ARRAY
+
+ Transformadores:
+
+    pop() --> saca el ultimo elemento del array y lo muestra array;
+    array.pop();
+
+    shift() --> lo mismo pero con el primero.
+    array.shift();
+
+    push() --> agrega un elemento al array al final del array y devuelve cant. de elementos.
+    array.push();
+
+    reverse() --> invierte el orden de los elementos del array.
+    array.reverse();
+
+    unshift() --> agrega elementos al array detras del mismo.
+    array.unshift(agregado);
+
+    sort() --> ordena segun lo normal.
+    array.sort();
+
+    splice() --> elimina elementos desde x posicion.
+    array.splice(desde,cant. a eliminar, elemento a reemplazar);
+ 
+ Accesores (nuevo array):
+
+    join() --> convierte el array en string;
+    array.join("separador a eleccion");
+    
+    slice() --> retorna una parte del array aislada.
+    array.slice(desde, hasta);
+
+    FUNCIONAN TODOS LOS DE STRING TAMBIEN. 
+
+ De Repeticion:
+    
+    filter() --> crea un array que muestra los elementos con x condicion;
+    EJEMPLO:
+        let array = ["negro", "manzana", "pobre", "ladron", "peter", "anashe"];
+        array.filter(numero => numero.lenght > 5) // va a mostrar los string con mas de 5 caracteres //;
+
+    forEach(function) --> ejecuta la funcion indicada 1 vez x cada elemento.
+
+
+Objeto math (basic): Math.function();
+
+ sqrt() --> raiz cuadrada.
+ cbrt() --> raiz cubica.
+ max(varios numeros) --> el mayor de.
+ min(varios numeros) --> el menor de.
+ random()*numeroMasAlto --> pseudo aleatorio entre 0 y 1.
+ round() --> redondea al entero mas cercano.
+ fround() --> redondea al flotante mas simple cercano al num.
+ floor() --> el mayor entero menor/igual qued un numero.
+ trunc() --> elimina digitos fraccionales y devuelve entero.
+
+CONSOLA
+
+Funciones de REGISTRO:
+
+   clear() --> limpia la CONSOLA
+   error(mensaje) --> mensaje de error
+   info(mensaje) -->  mensaje informativo en la consola.
+   table(array/objeto) --> muestra una tabla del array/objeto.
+   warn(mensaje) --> advertencia en la consola
+   dir(array/objeto) --> despliega lista interactiva con especificaciones.
+
+Funciones de CONTEO:
+
+   count() --> cuantas veces se ejecuto la funcion.
+   countReset() --> reset al contador.
+   //se utiliza usualmente para saber cuantas veces se runea una funcion//
+
+Funciones de AGRUPACION:
+
+   group(nombre) --> crea un grupo.
+   groupEnd() --> deletea el grupo.
+   groupCollapsed --> crea el grupo pero cerrado.
+
+Funciones de TEMPORIZACION:
+
+   time() --> inicia un timer.
+   timeEnd() --> finaliza el timer.
+   timeLog() --> nos muestra el tiempo.
+   
+
+EL DOM
+
+Dom --> Arbol compuesto por todas las divisones del codigo.
+Nodo --> cada division del arbol.
+
+Tipos de nodo:
+
+   *Document --> el nodo raiz.
+   *Element --> nodos definido por etiquetas html.
+   *Text --> el texto dentro de los nodos*Element.
+   *Attribute --> atributos o info asociadas a nodos*Element.
+
+( document. ):
+   
+   Metodos de Seleccion de elementos:
+
+      getElementById("Id") --> Seleccionamos un objeto entero por su Id.
+      getElementsByTagName("tag") --> todos los elementos "tag".
+      querySelector("Selector+Nombre")
+      querySelectorAll(Selector+Nombre) --> igual que el de arriba pero selecciona todos.
+
+   Metodos para Definir, Obtener y Eliminar valores de atributos:
+
+      elemento.setAttribute(parametro antes, parametro despues) --> modifica el primer parametro por el segundo.
+      elemento.getAttribute(parametro a recibir) --> obtiene el valor del atributo pedido.
+      elemento.removeAttribute(parametro a remover) --> borra el atributo.
+
+   Atributos Globales:
+
+      ("contentEditable","bool")
+
+   Atributos de Input:
+
+      (input.required = " ") --> coloca el campo como obligatorio.
+      (input.className) --> nos muestra el nombre de la clase.
+      (input.value) --> nos muestra el valor del input.
+      (input.type = "tipo") --> cambia el tipo.
+      (input.accept = "formato") --> acepta otro tipo de formatos.
+      (input.form = "id del formulario ") --> permite acceder al form desde fuera.
+      (input.minLenght = "longitud") --> coloca un minimo de 4 al input.
+      (input.placeholder = "string") --> coloca un placeholder.
+      
+   Atributo Style (permite modificar el css):
+
+      elemento.style.propiedad = " " --> modifica la propiedad a gusto.
+
+
+Clases, classList y Metodos de classList
+
+   elemento.classList.add("nombre") --> agrega una clase al elemento.
+   elemento.classList.remove("nombre") --> remueve una clase.
+   elemento.classList.item(numero) --> devuelve un valor = clase mediante su posicion.
+   elemento.classList.contains("clase") --> devuelve bool en caso de que contenga dicha clase.
+   elemento.classList.toggle("clase") --> si la tiene la saca y si no la tiene la agrega.
+   elemento.classList.replace("clase", "clase") --> reemplaza una clase por otra y devuelve un bool.
+
+
+Obtencion de Elementos   
+
+   elemento.textContent --> devuelve solo el texto dentro de la etiqueta sin etiquetas.
+   elemento.innerHTML --> muestra el contenido HTML.
+   elemento.outerHTML --> muestra el elemento HTML completo.   
+
+Creacion de Elementos
+
+   const container = document.querySelector(".clase");
+
+   const item = document.createElement("LI")<-- SI O SI EN MAYUS. --> crea elemento LI en HTML.
+   textDelItem = item.createTextNode("string")
+   item.appendChild(item);
+
+   genera un LI en HTML con el text dentro.
+
+   const fragmento = document.createDocumentFragment();
+
+   contenedor.appendChild(fragmento);
+
+   appendChild() --> agrega nuevos elemntos a un doc existente.
+
+Obtencion y Modificacion de Childs
+
+   const contenedor = document.querySelector(".clase")
+
+   contenedor.firstElementChild; --> selecciona el primer hijo dentor del container, por ejemplo, un h2.
+   contenedor.lastElementChild
+   contenedor.childNodes --> devuelve todos los nodos en forma de nodeList. NO ES ARRAY, osea, no funciona con prop de arrays.
+   NodeList --> no es array pero se puede recorrer con forEach
+   contenedor.children --> devuelve solo las etiquetas hijos sin su contenido. en NodeList.
+   esta no se puede recorrer con forEach pero si con un for of.
+
+Metodos de Childs
+
+   contenedor.replaceChild(nuevo, viejo) --> reemplaza el antiguo por el nuevo.
+   contenedor.removeChild(aRemover) --> elimina un elemento hijo.
+   contenedor.hasChildNodes() --> bool para saber si tiene hijos.
+
+Propiedades de Parents:
+
+   const hijo1 = document.querySelector(".clase");
+
+   hijo1.parentElement() --> busca una etiqueta padre HTML.
+
+Propiedades de Siblings:
+
+   hijo1.nextElementSibling() --> siguiente elemento hermano.
+   hijo2.previousElementSibling() --> anterior.
+
+Extra
+
+   contenedor.closest(".clase") --> busca el contenedor mas cercano ascendente mas cercano.
+
+
+
+   
+
+
+
+
+
+
+
+
+

@@ -91,7 +91,7 @@ async function filterTradingCard(price, gameId, cookieObj){
     let calculateProfit = (possibleCards * (tradingCardPriceTrimmed)*fee) - price;
 
     // shows only profitable games
-    if (calculateProfit > 0){
+    if (calculateProfit > 1){
         let makeNode = new fullDesc(gameNameTrimmed, 
             price, 
             possibleCards, 
@@ -113,10 +113,16 @@ async function getInfo(){
     let urlContent;
 
     const urlList = ['https://store.steampowered.com/search/results/?query&start=0&count=100&dynamic_data=&sort_by=Price_ASC&snr=1_7_7_230_7&maxprice=840&category1=998&category2=29&infinite=1',
-                     'https://store.steampowered.com/search/results/?query&start=100&count=200&dynamic_data=&sort_by=Price_ASC&snr=1_7_7_230_7&maxprice=840&category1=998&category2=29&infinite=1',
-                     'https://store.steampowered.com/search/results/?query&start=200&count=300&dynamic_data=&sort_by=Price_ASC&snr=1_7_7_230_7&maxprice=840&category1=998&category2=29&infinite=1',
-                     'https://store.steampowered.com/search/results/?query&start=300&count=400&dynamic_data=&sort_by=Price_ASC&snr=1_7_7_230_7&maxprice=840&category1=998&category2=29&infinite=1',
-    ]
+    'https://store.steampowered.com/search/results/?query&start=100&count=200&dynamic_data=&sort_by=Price_ASC&snr=1_7_7_230_7&maxprice=840&category1=998&category2=29&infinite=1',
+    'https://store.steampowered.com/search/results/?query&start=200&count=300&dynamic_data=&sort_by=Price_ASC&snr=1_7_7_230_7&maxprice=840&category1=998&category2=29&infinite=1',
+    'https://store.steampowered.com/search/results/?query&start=300&count=400&dynamic_data=&sort_by=Price_ASC&snr=1_7_7_230_7&maxprice=840&category1=998&category2=29&infinite=1',
+    'https://store.steampowered.com/search/results/?query&start=400&count=500&dynamic_data=&sort_by=Price_ASC&snr=1_7_7_230_7&maxprice=840&category1=998&category2=29&infinite=1',
+    'https://store.steampowered.com/search/results/?query&start=500&count=600&dynamic_data=&sort_by=Price_ASC&snr=1_7_7_230_7&maxprice=840&category1=998&category2=29&infinite=1',
+    'https://store.steampowered.com/search/results/?query&start=600&count=700&dynamic_data=&sort_by=Price_ASC&snr=1_7_7_230_7&maxprice=840&category1=998&category2=29&infinite=1',
+    'https://store.steampowered.com/search/results/?query&start=700&count=800&dynamic_data=&sort_by=Price_ASC&snr=1_7_7_230_7&maxprice=840&category1=998&category2=29&infinite=1',
+    'https://store.steampowered.com/search/results/?query&start=800&count=900&dynamic_data=&sort_by=Price_ASC&snr=1_7_7_230_7&maxprice=840&category1=998&category2=29&infinite=1',
+    'https://store.steampowered.com/search/results/?query&start=900&count=1000&dynamic_data=&sort_by=Price_ASC&snr=1_7_7_230_7&maxprice=840&category1=998&category2=29&infinite=1'
+]
     /* current list filters 400 games. If you want to filter more replace with the array below:
     const urlList = ['https://store.steampowered.com/search/results/?query&start=0&count=100&dynamic_data=&sort_by=Price_ASC&snr=1_7_7_230_7&maxprice=840&category1=998&category2=29&infinite=1',
                      'https://store.steampowered.com/search/results/?query&start=100&count=200&dynamic_data=&sort_by=Price_ASC&snr=1_7_7_230_7&maxprice=840&category1=998&category2=29&infinite=1',
